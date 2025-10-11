@@ -1,0 +1,38 @@
+# Core Dependencies
+gitpython>=3.1.40
+chromadb>=0.4.22
+pylint>=3.0.3
+radon>=6.0.1
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# LLM Integration
+requests>=2.31.0
+httpx>=0.26.0
+
+# Optional - Advanced LLM frameworks (uncomment if needed)
+# langchain>=0.1.0
+# llama-index>=0.9.0
+
+# Database and Storage
+sentence-transformers>=2.2.2
+
+# Utilities
+python-dotenv>=1.0.0
+rich>=13.7.0
+click>=8.1.7
+
+# CORS for FastAPI
+python-multipart>=0.0.6
+
+# Testing
+pytest>=7.4.3
+pytest-asyncio>=0.23.3
+pytest-cov>=4.1.0
+
+# Code Quality
+black>=23.12.1
+isort>=5.13.2
+mypy>=1.8.0

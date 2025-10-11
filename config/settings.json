@@ -1,0 +1,49 @@
+{
+  "llm": {
+    "provider": "ollama",
+    "base_url": "http://localhost:11434",
+    "model": "codellama:7b-instruct",
+    "temperature": 0.3,
+    "max_tokens": 2048,
+    "timeout": 120
+  },
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "chunk_size": 1000,
+    "chunk_overlap": 200
+  },
+  "code_quality": {
+    "max_complexity": 10,
+    "min_maintainability_index": 20,
+    "pylint_threshold": 7.0,
+    "enable_unused_imports": true,
+    "enable_missing_docstrings": true,
+    "enable_naming_conventions": true
+  },
+  "repository": {
+    "supported_extensions": [".py", ".js", ".ts", ".jsx", ".tsx", ".cpp", ".c", ".h", ".java", ".go", ".rs"],
+    "exclude_dirs": ["node_modules", "__pycache__", ".git", "venv", "env", ".venv", "dist", "build", ".next", ".pytest_cache"],
+    "exclude_files": ["*.pyc", "*.pyo", "*.so", "*.dll", "*.exe", "*.min.js"],
+    "max_file_size_kb": 500
+  },
+  "git": {
+    "auto_commit": true,
+    "commit_message_template": "{action} in {file}",
+    "create_backup": true,
+    "max_changes_per_commit": 5
+  },
+  "tasks": {
+    "enabled": ["refactor", "fix_bugs", "improve_code", "add_docstrings", "reduce_complexity"],
+    "priority": ["fix_bugs", "reduce_complexity", "improve_code", "add_docstrings", "refactor"]
+  },
+  "logging": {
+    "log_file": "logs/selfheal_log.json",
+    "log_level": "INFO",
+    "max_log_entries": 1000
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8000,
+    "reload": true
+  }
+}
